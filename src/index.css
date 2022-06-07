@@ -73,3 +73,24 @@ textarea{
 .delete-icon{
   cursor: pointer;
 }
+
+.search {
+  display: flex;
+  align-items: center;
+  background-color: rgb(233,233,233);
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 1.5em;
+}
+
+.search input{
+  border: none;
+  background: rgb(233,233,233);
+}
+
+/* adding this makes it unaccsesible though, need a better solution */
+/* .search input:focus{
+  outline: none;
+} */
+
+
