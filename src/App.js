@@ -29,8 +29,19 @@ const App = () => {
   ]);
 
   const [searchText, setSearchText] = React.useState("");
-
   const [darkMode, setDarkMode] = React.useState(false);
+
+  React.useEffect(() => {
+    const savedNotes = JSON.parse(localStorage.getItem("react-notes-app-data"));
+
+    if (savedNotes) {
+      setNotes(savedNotes);
+    }
+  }, []);
+
+  React.useEffect(() => {
+    localStorage.setItem("react-notes-app-data", JSON.stringify(notes));
+  }, [notes]);
 
   const addNote = (text) => {
     const date = new Date();
