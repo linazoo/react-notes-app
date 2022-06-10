@@ -5,28 +5,7 @@ import Search from "./components/Search";
 import Header from "./components/Header";
 
 const App = () => {
-  const [notes, setNotes] = React.useState([
-    {
-      id: nanoid(),
-      text: "this is my first note",
-      date: "05/22/21",
-    },
-    {
-      id: nanoid(),
-      text: "this is my second note",
-      date: "04/4/21",
-    },
-    {
-      id: nanoid(),
-      text: "this is my third note",
-      date: "06/3/21",
-    },
-    {
-      id: nanoid(),
-      text: "this is my new note",
-      date: "06/3/21",
-    },
-  ]);
+  const [notes, setNotes] = React.useState([]);
 
   const [searchText, setSearchText] = React.useState("");
   const [darkMode, setDarkMode] = React.useState(false);
